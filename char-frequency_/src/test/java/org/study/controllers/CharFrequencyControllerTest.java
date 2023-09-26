@@ -41,7 +41,6 @@ public class CharFrequencyControllerTest {
     @Test
     public void testCalculateFrequencyTooLongInput() throws Exception {
         String longInput = new String(new char[11]).replace("\0", "a");
-
         mockMvc.perform(post("/api/frequency")
                         .contentType(MediaType.TEXT_PLAIN)
                         .content(longInput))
